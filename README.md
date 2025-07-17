@@ -69,8 +69,8 @@ Table legend:
 | ------------- | -------------- | -------------- |
 | [1]           | ✅             | Use full url, owner/repo format not supported.
 | dir           | ✅             | Not handled by `vim.pack` but appended to rtp.
-| url           | ✅             | Use `src` of `|vim.pack.Spec|`.
-| name          | ✅             | `name` of `|vim.pack.Spec|`.
+| url           | ✅             | Use `src` of `vim.pack.Spec`.
+| name          | ✅             | `name` of `vim.pack.Spec`.
 | dev           | ❌             |
 | dependencies  | ✅             |
 | enabled       | ✅             | Same as `cond`.
@@ -86,10 +86,10 @@ Table legend:
 | cmd           | ➖             |
 | ft            | ✅             |
 | keys          | ➖             |
-| branch        | ✅             | Use `version` of `|vim.pack.Spec|`.
-| tag           | ✅             | Use `version` of `|vim.pack.Spec|`.
-| commit        | ✅             | Use `version` of `|vim.pack.Spec|`.
-| version       | ✅             | `version` of `|vim.pack.Spec|`.
+| branch        | ✅             | Use `version` of `vim.pack.Spec`.
+| tag           | ✅             | Use `version` of `vim.pack.Spec`.
+| commit        | ✅             | Use `version` of `vim.pack.Spec`.
+| version       | ✅             | `version` of `vim.pack.Spec`.
 | pin           | ✅             |
 | submodules    | ❌             |
 | optional      | ❌             |
