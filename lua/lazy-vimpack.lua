@@ -67,9 +67,21 @@ local function setup_autocmd(plugin, event, pattern)
 end
 
 function M.add(plugins)
+	-- load from config files that return specs
 	if type(plugins) == 'string' then
-		-- require that dir and load plugins
+		local loadedplugins = {}
+		local folder = vim.fs.joinpath(vim.fn.stdpath('config'), 'lua', plugins)
+		for file in vim.fs.dir(folder) do
+			if vim.endswith(file, '.lua') then
+				local x = dofile(vim.fs.joinpath(folder, file))
+				if type(x) == 'table' then
+					table.insert(loadedplugins, x)
+				end
+			end
+		end
+		plugins = loadedplugins
 	end
+
 	for _, plugin in ipairs(plugins) do
 		if type(plugin) == 'string' then
 			plugin = { src = plugin }

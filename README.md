@@ -98,9 +98,6 @@ Table legend:
 | import        | ❌             |
 
 
-Another feature which I'm planning to add is defining each plugin in a separate
-file.
-
 ## Disclaimer
 
 This project is in no way associated with
